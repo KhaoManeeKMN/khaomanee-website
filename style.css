@@ -144,3 +144,24 @@ flex-direction:column;
 }
 
 }
+.tokenomics{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+gap:20px;
+margin-top:20px;
+}
+
+.card{
+background:rgba(255,255,255,.08);
+border:1px solid rgba(20,241,149,.25);
+border-radius:16px;
+padding:20px;
+font-size:18px;
+font-weight:bold;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-6px);
+box-shadow:0 0 20px rgba(20,241,149,.35);
+}

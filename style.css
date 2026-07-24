@@ -216,3 +216,71 @@ color:#14F195;
 font-size:16px;
 line-height:1.6;
 }
+/* ===== EFECTOS PREMIUM ===== */
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+overflow-x:hidden;
+}
+
+section{
+transition:.35s;
+}
+
+section:hover{
+transform:translateY(-6px);
+box-shadow:0 0 35px rgba(20,241,149,.18);
+}
+
+.buttons a{
+box-shadow:0 0 20px rgba(153,69,255,.35);
+}
+
+.buttons a:hover{
+transform:translateY(-4px) scale(1.05);
+box-shadow:0 0 30px rgba(20,241,149,.55);
+}
+
+.logo{
+transition:.4s;
+}
+
+.logo:hover{
+transform:scale(1.05) rotate(3deg);
+}
+
+.card{
+cursor:pointer;
+}
+
+.card:hover{
+transform:translateY(-8px) scale(1.03);
+}
+
+.phase{
+cursor:pointer;
+}
+
+.phase:hover{
+transform:translateY(-8px);
+}
+
+footer{
+border-top:1px solid rgba(255,255,255,.1);
+margin-top:70px;
+padding-top:35px;
+}
+
+footer a{
+color:#14F195;
+text-decoration:none;
+margin:0 10px;
+font-weight:bold;
+}
+
+footer a:hover{
+color:white;
+}

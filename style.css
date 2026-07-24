@@ -165,3 +165,32 @@ transition:.3s;
 transform:translateY(-6px);
 box-shadow:0 0 20px rgba(20,241,149,.35);
 }
+.roadmap{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+margin-top:20px;
+}
+
+.phase{
+background:rgba(255,255,255,.08);
+border:1px solid rgba(20,241,149,.25);
+border-radius:16px;
+padding:20px;
+text-align:left;
+transition:.3s;
+}
+
+.phase:hover{
+transform:translateY(-6px);
+box-shadow:0 0 20px rgba(20,241,149,.35);
+}
+
+.phase h3{
+margin-bottom:15px;
+color:#14F195;
+}
+
+.phase p{
+margin:8px 0;
+}

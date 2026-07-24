@@ -1,122 +1,81 @@
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Khao Manee (KMN)</title>
 
-html{
-scroll-behavior:smooth;
-}
+<link rel="stylesheet" href="style.css">
+</head>
 
-body{
-background:#070B17;
-color:white;
-overflow-x:hidden;
-}
+<body>
 
-.background{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:
-radial-gradient(circle at top,#7a2cff33,transparent 45%),
-radial-gradient(circle at bottom,#00e5ff22,transparent 45%),
-linear-gradient(180deg,#090b16,#111827);
-z-index:-2;
-}
+<div class="background"></div>
 
-nav{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:25px 8%;
-position:fixed;
-width:100%;
-backdrop-filter:blur(15px);
-background:rgba(0,0,0,.25);
-z-index:1000;
-}
+<nav>
+    <div class="logo">🐱 Khao Manee</div>
 
-.logo{
-font-size:28px;
-font-weight:800;
-color:#8a5cff;
-}
+    <div>
+        <a href="#about">About</a>
+        <a href="#token">Token</a>
+        <a href="#community">Community</a>
+    </div>
+</nav>
 
-nav ul{
-display:flex;
-gap:30px;
-list-style:none;
-}
+<section class="hero">
 
-nav a{
-color:white;
-text-decoration:none;
-font-weight:600;
-transition:.3s;
-}
+<h1>Khao Manee (KMN)</h1>
 
-nav a:hover{
-color:#00e7ff;
-}
+<p>
+The Lucky Cat of Solana.
+A community-driven meme coin built for fun,
+growth and the future.
+</p>
 
-.hero{
-padding-top:150px;
-text-align:center;
-width:90%;
-max-width:900px;
-margin:auto;
-}
+<div class="hero-buttons">
+<a href="https://x.com/" target="_blank">Twitter</a>
+<a href="https://t.me/" target="_blank">Telegram</a>
+<button onclick="copyContract()">Copy Contract</button>
+</div>
 
-.hero-logo{
-width:260px;
-border-radius:50%;
-box-shadow:0 0 40px #8a5cff;
-animation:float 4s ease-in-out infinite;
-}
+</section>
 
-@keyframes float{
+<section id="about">
 
-0%{
-transform:translateY(0px);
-}
+<h2>About</h2>
 
-50%{
-transform:translateY(-15px);
-}
+<p>
+Khao Manee represents luck, strength and community.
+Built on Solana with fast transactions and low fees.
+</p>
 
-100%{
-transform:translateY(0px);
-}
+</section>
 
-}
+<section id="token">
 
-.hero h1{
-font-size:70px;
-margin-top:30px;
-font-weight:800;
-}
+<h2>Token</h2>
 
-.hero h2{
-margin-top:10px;
-font-size:30px;
-color:#00e7ff;
-}
+<p>Blockchain: Solana</p>
 
-.hero p{
-margin-top:30px;
-font-size:20px;
-line-height:35px;
-opacity:.9;
-}
+<p id="contract">
+Contract:
+B2SDZA6De8Tr9c6dJvVGVS
+</p>
 
-.hero-buttons{
-margin-top:50px;
-display:flex;
-justify-content:center;
-flex-wrap:wrap;
-gap:20px;
-}
+</section>
+
+<section id="community">
+
+<h2>Join the Community</h2>
+
+<p>
+Follow us on Twitter and Telegram.
+Together we build KMN.
+</p>
+
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -417,3 +417,19 @@ font-size:15px;
 word-break:break-all;
 
 }
+.buttons{
+    display:flex !important;
+    flex-wrap:wrap !important;
+    justify-content:center !important;
+    gap:20px !important;
+}
+
+.buttons a{
+    display:inline-block !important;
+    background:#14F195 !important;
+    color:#000 !important;
+    padding:15px 22px !important;
+    border-radius:12px !important;
+    text-decoration:none !important;
+    font-weight:bold !important;
+}

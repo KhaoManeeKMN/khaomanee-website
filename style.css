@@ -284,3 +284,101 @@ font-weight:bold;
 footer a:hover{
 color:white;
 }
+/* ===== KMN PREMIUM UPGRADE ===== */
+
+.subtitle{
+    font-size:1.6rem;
+    color:#14F195;
+    font-weight:700;
+    margin-top:10px;
+}
+
+.hero-text{
+    max-width:700px;
+    margin:20px auto;
+    color:#d8d8d8;
+    line-height:1.8;
+    font-size:1.1rem;
+}
+
+.buttons{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:15px;
+    margin-top:30px;
+}
+
+.buttons a{
+    padding:14px 28px;
+    border-radius:14px;
+    text-decoration:none;
+    color:white;
+    background:linear-gradient(135deg,#9945FF,#14F195);
+    font-weight:bold;
+    transition:.3s;
+    box-shadow:0 0 20px rgba(20,241,149,.25);
+}
+
+.buttons a:hover{
+    transform:translateY(-4px) scale(1.05);
+    box-shadow:0 0 35px rgba(20,241,149,.5);
+}
+
+.logo{
+    animation:floatLogo 4s ease-in-out infinite;
+}
+
+@keyframes floatLogo{
+
+0%{
+transform:translateY(0px);
+}
+
+50%{
+transform:translateY(-12px);
+}
+
+100%{
+transform:translateY(0px);
+}
+
+}
+
+.card{
+
+transition:.35s;
+
+}
+
+.card:hover{
+
+transform:translateY(-10px);
+
+box-shadow:0 0 35px rgba(20,241,149,.25);
+
+}
+
+.phase{
+
+transition:.35s;
+
+}
+
+.phase:hover{
+
+transform:scale(1.04);
+
+box-shadow:0 0 30px rgba(153,69,255,.35);
+
+}
+
+.contract{
+
+font-family:monospace;
+
+font-size:15px;
+
+word-break:break-all;
+
+}

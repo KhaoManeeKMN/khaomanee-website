@@ -41,7 +41,41 @@ color:#cfcfcf;
 margin-bottom:35px;
 }
 
-.buttons{
+.buttons a{
+
+display:inline-flex;
+align-items:center;
+justify-content:center;
+
+padding:15px 28px;
+
+background:linear-gradient(135deg,#9945FF,#14F195);
+
+color:#fff;
+
+font-weight:700;
+
+text-decoration:none;
+
+border-radius:14px;
+
+margin:8px;
+
+transition:.3s;
+
+box-shadow:0 0 25px rgba(20,241,149,.25);
+
+min-width:170px;
+
+}
+
+.buttons a:hover{
+
+transform:translateY(-5px);
+
+box-shadow:0 0 40px rgba(20,241,149,.45);
+
+}
 display:flex;
 justify-content:center;
 gap:15px;

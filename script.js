@@ -1,20 +1,59 @@
-function copyContract() {
+// Navegación suave
+document.querySelectorAll('nav a').forEach(link => {
+    link.addEventListener('click', function(e) {
+        e.preventDefault();
 
-  const contract = "B2SDZA6De8Tr9c6dJvVGVSPyEVrRp5k7kVeSHnJdpump";
+        const target = document.querySelector(this.getAttribute('href'));
 
-  navigator.clipboard.writeText(contract);
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+    });
+});
 
-  const button = document.querySelector(".contract button");
+// Guardar idioma seleccionado
+const language = document.getElementById('language');
 
-  const originalText = button.innerText;
+if (language) {
 
-  button.innerText = "✅ Copied!";
+    const saved = localStorage.getItem('knm-language');
 
-  button.style.background = "#14F195";
-  button.style.color = "#000";
+    if (saved) {
+        language.value = saved;
+    }
 
-  setTimeout(() => {
-    button.innerText = originalText;
-  }, 2000);
+    language.addEventListener('change', function () {
+        localStorage.setItem('knm-language', this.value);
+    });
 
 }
+
+// Animación al aparecer las tarjetas
+const cards = document.querySelectorAll('.card');
+
+const observer = new IntersectionObserver(entries => {
+
+    entries.forEach(entry => {
+
+        if(entry.isIntersecting){
+
+            entry.target.style.opacity = "1";
+            entry.target.style.transform = "translateY(0)";
+
+        }
+
+    });
+
+});
+
+cards.forEach(card=>{
+
+    card.style.opacity="0";
+    card.style.transform="translateY(40px)";
+    card.style.transition=".6s";
+
+    observer.observe(card);
+
+});

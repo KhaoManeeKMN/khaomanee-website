@@ -1,59 +1,81 @@
-// Navegación suave
-document.querySelectorAll('nav a').forEach(link => {
-    link.addEventListener('click', function(e) {
-        e.preventDefault();
+// ================================
+// KHAO MANEE WEBSITE
+// ================================
 
-        const target = document.querySelector(this.getAttribute('href'));
+// Copy Contract
 
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth'
-            });
-        }
-    });
-});
+function copyContract(){
 
-// Guardar idioma seleccionado
-const language = document.getElementById('language');
+const input=document.getElementById("contractAddress");
 
-if (language) {
+input.select();
 
-    const saved = localStorage.getItem('knm-language');
+input.setSelectionRange(0,99999);
 
-    if (saved) {
-        language.value = saved;
-    }
+navigator.clipboard.writeText(input.value);
 
-    language.addEventListener('change', function () {
-        localStorage.setItem('knm-language', this.value);
-    });
+const button=document.querySelector(".contract-box button");
+
+const oldText=button.innerHTML;
+
+button.innerHTML="✅ COPIED!";
+
+setTimeout(()=>{
+
+button.innerHTML=oldText;
+
+},2000);
 
 }
 
-// Animación al aparecer las tarjetas
-const cards = document.querySelectorAll('.card');
 
-const observer = new IntersectionObserver(entries => {
 
-    entries.forEach(entry => {
+// Navbar shadow
 
-        if(entry.isIntersecting){
+window.addEventListener("scroll",()=>{
 
-            entry.target.style.opacity = "1";
-            entry.target.style.transform = "translateY(0)";
+const navbar=document.querySelector(".navbar");
 
-        }
+if(window.scrollY>30){
 
-    });
+navbar.style.background="rgba(5,5,20,.90)";
+
+}else{
+
+navbar.style.background="rgba(5,5,20,.45)";
+
+}
 
 });
 
-cards.forEach(card=>{
 
-    card.style.opacity="0";
-    card.style.transform="translateY(40px)";
-    card.style.transition=".6s";
 
-    observer.observe(card);
+// Fade animation
+
+const observer=new IntersectionObserver(entries=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.style.opacity="1";
+
+entry.target.style.transform="translateY(0px)";
+
+}
+
+});
+
+});
+
+document.querySelectorAll("section").forEach(section=>{
+
+section.style.opacity="0";
+
+section.style.transform="translateY(40px)";
+
+section.style.transition=".8s";
+
+observer.observe(section);
 
 });

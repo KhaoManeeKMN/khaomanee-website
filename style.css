@@ -234,3 +234,42 @@ padding:25px;
 }
 
 }
+.hero-buttons{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:15px;
+margin-top:30px;
+}
+
+.btn{
+display:inline-block;
+padding:14px 24px;
+border-radius:14px;
+text-decoration:none;
+font-weight:bold;
+color:white;
+transition:0.3s;
+box-shadow:0 0 15px rgba(20,241,149,.35);
+}
+
+.btn:hover{
+transform:translateY(-3px);
+}
+
+.btn-buy{
+background:#14F195;
+color:#000;
+}
+
+.btn-chart{
+background:#9945FF;
+}
+
+.btn-x{
+background:#111;
+}
+
+.btn-tg{
+background:#229ED9;
+}

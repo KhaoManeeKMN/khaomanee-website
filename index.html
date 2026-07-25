@@ -3,284 +3,330 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>KHAOO MANEE | The White Diamond of Solana</title>
-
-<meta name="description" content="KNM - Community Driven Meme Coin on Solana">
+<title>KHAO MANEE | The Lucky Cat of Solana</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="style.css">
-
-<link rel="icon" href="favicon.ico">
-
 </head>
 
 <body>
 
-<header class="header">
+<div class="background-glow"></div>
+
+<header>
+
+<nav class="navbar">
 
 <div class="logo">
-
-<h2>🐱 KNM</h2>
-
+🐱 KHAO MANEE
 </div>
-
-<nav>
 
 <ul>
 
 <li><a href="#about">About</a></li>
-
 <li><a href="#tokenomics">Tokenomics</a></li>
-
 <li><a href="#roadmap">Roadmap</a></li>
-
 <li><a href="#community">Community</a></li>
 
 </ul>
 
+<a class="buy-button"
+href="https://pump.fun/coin/B2SDZA6De8Tr9c6dJvVGVSPyEVrRp5k7kVeSHnJdpump"
+target="_blank">
+
+BUY NOW
+
+</a>
+
 </nav>
-
-<div class="language">
-
-<select id="language">
-
-<option value="en">🇬🇧 English</option>
-
-<option value="es">🇪🇸 Español</option>
-
-<option value="zh">🇨🇳 中文</option>
-
-<option value="ru">🇷🇺 Русский</option>
-
-<option value="ar">🇸🇦 العربية</option>
-
-</select>
-
-</div>
 
 </header>
 
 <section class="hero">
 
-<div class="hero-content">
+<div class="hero-left">
 
-<h1>KHAOO MANEE</h1>
+<h1>
 
-<h2>The White Diamond of Solana</h2>
+THE LUCKY CAT OF SOLANA
 
-<p>
-
-Rare by Nature.<br>
-
-Strong by Community.
-
-</p>
-
-<div class="buttons">
-
-<a class="btn buy" href="https://pump.fun/coin/B2SDZA6De8Tr9c6dJvVGVSPyEVrRp5k7kVeSHnJdpump" target="_blank">BUY KMN</a>
-
-<a class="btn telegram" href="https://t.me/KhaoManeeKMN" target="_blank">TELEGRAM</a>
-
-<a class="btn twitter" href="https://x.com/khaomaneekmn" target="_blank">X</a>
-
-</div>
-
-</div>
-
-<div class="hero-image">
-
-<img src="assets/hero-cat.png" alt="Khao Manee">
-
-</div>
-
-</section><!-- ABOUT -->
-
-<section id="about" class="about">
-
-<div class="container">
-
-<h2>About KNM</h2>
+</h1>
 
 <p>
 
-KHAOO MANEE is inspired by one of the world's rarest cat breeds.
+Khao Manee isn't just another meme coin.
 
-Known as the White Diamond, it represents luck, elegance and prosperity.
+It's a community driven project inspired by one of the rarest cats in the world.
 
-KNM is a community-driven project built on Solana with a long-term vision.
+Fast.
+Transparent.
+Built for the future.
 
 </p>
+
+<div class="hero-buttons">
+
+<a
+class="primary-btn"
+href="https://pump.fun/coin/B2SDZA6De8Tr9c6dJvVGVSPyEVrRp5k7kVeSHnJdpump"
+target="_blank">
+
+BUY KNM
+
+</a>
+
+<a
+class="secondary-btn"
+href="https://x.com/khaomaneekmn"
+target="_blank">
+
+X
+
+</a>
+
+<a
+class="secondary-btn"
+href="https://t.me/KhaoManeeKMN"
+target="_blank">
+
+TELEGRAM
+
+</a>
+
+</div>
+
+</div>
+
+<div class="hero-right">
+
+<img
+src="profile_photo_1784830997187.png"
+alt="Khao Manee">
+
+</div>
+
+</section><section id="about" class="about">
+
+<div class="section-title">
+<h2>ABOUT KNM</h2>
+<p>The Legendary Lucky Cat of Solana</p>
+</div>
+
+<div class="about-grid">
+
+<div class="about-card">
+
+<h3>🐱 Rare</h3>
+
+<p>
+The Khao Manee is one of the rarest cat breeds in the world,
+known for bringing luck, prosperity and success.
+</p>
+
+</div>
+
+<div class="about-card">
+
+<h3>⚡ Fast</h3>
+
+<p>
+Built on Solana for lightning-fast transactions,
+low fees and unlimited community growth.
+</p>
+
+</div>
+
+<div class="about-card">
+
+<h3>💜 Community</h3>
+
+<p>
+KNM belongs to its holders.
+Every new member helps build the Lucky Cat ecosystem.
+</p>
+
+</div>
 
 </div>
 
 </section>
 
-<!-- TOKENOMICS -->
+
+<section id="contract" class="contract">
+
+<div class="section-title">
+
+<h2>OFFICIAL CONTRACT</h2>
+
+<p>
+Copy the official KNM contract below.
+</p>
+
+</div>
+
+<div class="contract-box">
+
+<input
+type="text"
+readonly
+value="B2SDZA6De8Tr9c6dJvVGVSPyEVrRp5k7kVeSHnJdpump"
+id="contractAddress">
+
+<button onclick="copyContract()">
+
+COPY CONTRACT
+
+</button>
+
+</div>
+
+</section>
+
 
 <section id="tokenomics" class="tokenomics">
 
-<div class="container">
+<div class="section-title">
 
-<h2>Tokenomics</h2>
+<h2>TOKENOMICS</h2>
 
-<div class="cards">
-
-<div class="card">
-
-<h3>Blockchain</h3>
-
-<p>Solana</p>
+<p>Simple. Fair. Community Driven.</p>
 
 </div>
 
-<div class="card">
+<div class="token-grid">
 
-<h3>Ticker</h3>
+<div class="token-card">
 
-<p>KNM</p>
+<h3>0%</h3>
 
-</div>
-
-<div class="card">
-
-<h3>Launch</h3>
-
-<p>Pump.fun</p>
+<p>BUY TAX</p>
 
 </div>
 
-<div class="card">
+<div class="token-card">
 
-<h3>Contract</h3>
+<h3>0%</h3>
 
-<p>B2SDZA6De8Tr9c6dJvVGVSPyEVrRp5k7kVeSHnJdpump</p>
-
-</div>
-
-<div class="card">
-
-<h3>Private Sale</h3>
-
-<p>None</p>
+<p>SELL TAX</p>
 
 </div>
 
-<div class="card">
+<div class="token-card">
 
-<h3>Community</h3>
+<h3>100%</h3>
 
-<p>100% Community Driven</p>
+<p>COMMUNITY</p>
+
+</div>
+
+<div class="token-card">
+
+<h3>SOLANA</h3>
+
+<p>NETWORK</p>
 
 </div>
 
 </div>
 
-</div>
+</section><section id="roadmap" class="roadmap">
+
+    <div class="section-title">
+        <h2>ROADMAP</h2>
+        <p>Building the Lucky Cat ecosystem together.</p>
+    </div>
+
+    <div class="roadmap-grid">
+
+        <div class="road-card">
+            <h3>PHASE 1</h3>
+            <ul>
+                <li>✅ Token Launch</li>
+                <li>✅ Website</li>
+                <li>✅ X Account</li>
+                <li>✅ Telegram</li>
+            </ul>
+        </div>
+
+        <div class="road-card">
+            <h3>PHASE 2</h3>
+            <ul>
+                <li>Marketing Campaign</li>
+                <li>Community Growth</li>
+                <li>Trending on Solana</li>
+                <li>First Partnerships</li>
+            </ul>
+        </div>
+
+        <div class="road-card">
+            <h3>PHASE 3</h3>
+            <ul>
+                <li>Coin Listing Sites</li>
+                <li>Influencer Campaigns</li>
+                <li>10K Holders</li>
+                <li>Global Expansion</li>
+            </ul>
+        </div>
+
+        <div class="road-card">
+            <h3>PHASE 4</h3>
+            <ul>
+                <li>Major Exchange Listings</li>
+                <li>NFT Collection</li>
+                <li>KNM Ecosystem</li>
+                <li>The Lucky Cat Worldwide</li>
+            </ul>
+        </div>
+
+    </div>
 
 </section>
 
-<!-- ROADMAP -->
-
-<section id="roadmap" class="roadmap">
-
-<div class="container">
-
-<h2>Roadmap</h2>
-
-<ul>
-
-<li>✅ Launch on Pump.fun</li>
-
-<li>✅ Website</li>
-
-<li>✅ X & Telegram</li>
-
-<li>🚀 Community Growth</li>
-
-<li>🚀 Raydium Migration</li>
-
-<li>🚀 CoinGecko</li>
-
-<li>🚀 CoinMarketCap</li>
-
-<li>🚀 CEX Listings</li>
-
-</ul>
-
-</div>
-
-</section>
-
-<!-- COMMUNITY -->
 
 <section id="community" class="community">
 
-<div class="container">
+    <div class="section-title">
+        <h2>JOIN THE COMMUNITY</h2>
+        <p>Become part of the Lucky Cat family.</p>
+    </div>
 
-<h2>Join the Community</h2>
+    <div class="community-buttons">
 
-<div class="buttons">
+        <a href="https://x.com/khaomaneekmn" target="_blank">
+            X (Twitter)
+        </a>
 
-<a href="#" class="btn">Telegram</a>
+        <a href="https://t.me/KhaoManeeKMN" target="_blank">
+            Telegram
+        </a>
 
-<a href="#" class="btn">X</a>
+        <a href="https://pump.fun/coin/B2SDZA6De8Tr9c6dJvVGVSPyEVrRp5k7kVeSHnJdpump" target="_blank">
+            Buy KNM
+        </a>
 
-<a href="#" class="btn">Pump.fun</a>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- FAQ -->
-
-<section class="faq">
-
-<div class="container">
-
-<h2>FAQ</h2>
-
-<h3>What is KNM?</h3>
-
-<p>A community-driven meme coin inspired by the Khao Manee cat.</p>
-
-<h3>Which blockchain?</h3>
-
-<p>Solana.</p>
-
-<h3>Is there a private sale?</h3>
-
-<p>No. KNM follows a fair launch approach.</p>
-
-</div>
+    </div>
 
 </section>
 
-<!-- FOOTER -->
 
 <footer>
 
-<div class="container">
+    <h2>KHAO MANEE</h2>
 
-<h2>KHAOO MANEE</h2>
+    <p>
+        The Lucky Cat of Solana.
+    </p>
 
-<p>The White Diamond of Solana</p>
-
-<p>Rare by Nature. Strong by Community.</p>
-
-</div>
+    <p class="copyright">
+        © 2026 KHAO MANEE (KNM). All Rights Reserved.
+    </p>
 
 </footer>
 
 <script src="script.js"></script>
 
 </body>
-
 </html>

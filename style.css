@@ -827,7 +827,7 @@ max-width:420px;
 @media(max-width:768px){
 
 .navbar{
-
+display:none;
 padding:18px 6%;
 
 flex-direction:column;

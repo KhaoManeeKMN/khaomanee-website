@@ -73,39 +73,48 @@ a{
 .navbar{
 
     position:fixed;
-
     top:0;
     left:0;
 
     width:100%;
 
     display:flex;
-
-    justify-content:space-between;
-
+    justify-content:center;
     align-items:center;
+    flex-direction:column;
 
-    padding:22px 8%;
+    gap:18px;
 
-    backdrop-filter:blur(20px);
+    padding:14px 5%;
 
-    background:rgba(8,10,24,.72);
+    background:rgba(5,8,22,.88);
 
-    border-bottom:1px solid rgba(255,255,255,.08);
+    backdrop-filter:blur(25px);
+
+    border-bottom:1px solid rgba(255,255,255,.06);
 
     z-index:999;
 
 }
+    
 
 .logo{
 
-    font-size:30px;
-
-    font-weight:900;
+    font-size:40px;
 
     font-family:'Orbitron',sans-serif;
 
-    color:#fff;
+    font-weight:900;
+
+    letter-spacing:2px;
+
+    color:#ffffff;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
 
 }
 

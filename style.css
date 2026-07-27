@@ -228,7 +228,7 @@ a{
 
 }
 
-}
+
 
 .stat-card{
 
@@ -284,7 +284,7 @@ a{
 
     background:linear-gradient(135deg,#00e5c3,#6d5cff);
 
-    padding:18px 38px;
+    padding:20px 42px;
 
     border-radius:50px;
 
@@ -292,7 +292,9 @@ a{
 
     color:white;
 
-    box-shadow:0 15px 40px rgba(0,229,195,.28);
+    box-shadow:
+0 0 20px rgba(0,229,195,.35),
+0 15px 40px rgba(109,92,255,.35);
 
 }
 
@@ -970,14 +972,30 @@ padding:50px 25px;
     line-height:1.1;
 
 }
+.hero-logo h2{
 
+    font-family:'Orbitron',sans-serif;
+
+    font-size:28px;
+
+    font-weight:700;
+
+    color:#00e5c3;
+
+    letter-spacing:8px;
+
+    margin-bottom:12px;
+
+    text-shadow:0 0 20px rgba(0,229,195,.45);
+
+}
 .hero-logo span{
 
     display:block;
-    font-size:22px;
+    font-size:20px;
     color:#00e5c3;
     font-weight:600;
-    letter-spacing:3px;
+    letter-spacing:5px;
 
 }
 
@@ -991,13 +1009,13 @@ padding:50px 25px;
 
     color:#00e5c3;
 
-    padding:10px 18px;
+    padding:12px 22px;
 
     border-radius:40px;
 
     margin-bottom:25px;
 
-    font-size:14px;
+    font-size:16px;
 
     letter-spacing:2px;
 

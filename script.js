@@ -80,88 +80,37 @@ observer.observe(section);
 
 });
 // ================================
-// LIVE PRICE FROM DEXSCREENER
+// LIVE METRICS
 // ================================
 
-async function updateKMNPrice(){
+const PAIR_URL = "https://api.dexscreener.com/latest/dex/pairs/solana/ehd2txxtquwsu3kspjeaohgcbcvdhy7qg32s5n6yzaui";
 
-try{
+async function loadKMN() {
 
-const response = await fetch("https://api.dexscreener.com/latest/dex/pairs/solana/ehd2txxtquwsu3kspjeaohgcbcvdhy7qg32s5n6yzaui");
+    try {
 
-const data = await response.json();
+        const response = await fetch(PAIR_URL);
+        const data = await response.json();
 
-const pair = data.pair;
+        if (!data.pair) return;
 
-document.getElementById("tokenPrice").innerHTML =
-"$" + Number(pair.priceUsd).toFixed(8);
+        document.getElementById("marketCap").innerHTML =
+            "$" + Math.round(data.pair.fdv).toLocaleString();
 
-document.getElementById("marketCap").innerHTML =
-"$" + Number(pair.marketCap).toLocaleString();
+        document.getElementById("tokenPrice").innerHTML =
+            "$" + Number(data.pair.priceUsd).toFixed(8);
 
-}catch(err){
+        document.getElementById("currentSupply").innerHTML =
+            "8,888,888,888 KMN";
 
-console.log(err);
+    } catch (error) {
 
-}
+        console.log("DexScreener error:", error);
 
-}
-
-updateKMNPrice();
-
-setInterval(updateKMNPrice,10000);
-// ================================
-// LIVE DATA FROM DEXSCREENER
-// ================================
-
-const PAIR =
-"https://api.dexscreener.com/latest/dex/pairs/solana/ehd2txxtquwsu3kspjeaohgcbcvdhy7qg32s5n6yzaui";
-
-async function loadKMN(){
-
-try{
-
-const response = await fetch(PAIR);
-
-const data = await response.json();
-
-const pair = data.pair;
-
-document.getElementById("marketCap").innerHTML =
-"$" + Number(pair.fdv).toLocaleString();
-
-document.getElementById("tokenPrice").innerHTML =
-"$" + Number(pair.priceUsd).toFixed(8);
-
-}catch(e){
-
-console.log(e);
-
-}
+    }
 
 }
 
 loadKMN();
 
-setInterval(loadKMN,10000);
-// ================================
-// LIVE METRICS
-// ================================
-
-fetch("https://api.dexscreener.com/latest/dex/pairs/solana/ehd2txxtquwsu3kspjeaohgcbcvdhy7qg32s5n6yzaui")
-.then(res => res.json())
-.then(data => {
-
-    const pair = data.pair;
-
-    document.getElementById("marketCap").innerHTML =
-        "$" + Number(pair.fdv).toLocaleString();
-
-    document.getElementById("tokenPrice").innerHTML =
-        "$" + Number(pair.priceUsd).toFixed(8);
-
-    document.getElementById("currentSupply").innerHTML =
-        "8,888,888,888 KMN";
-
-})
-.catch(err => console.log(err));
+setInterval(loadKMN, 10000);

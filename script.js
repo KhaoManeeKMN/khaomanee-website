@@ -92,13 +92,15 @@ async function loadKMN() {
         const response = await fetch(PAIR_URL);
         const data = await response.json();
 
-        if (!data.pair) return;
+        const pair = data.pairs[0];
+
+if (!pair) return;
 
         document.getElementById("marketCap").innerHTML =
-            "$" + Math.round(data.pair.fdv).toLocaleString();
+            "$" + Math.round(pair.fdv).toLocaleString();
 
         document.getElementById("tokenPrice").innerHTML =
-            "$" + Number(data.pair.priceUsd).toFixed(8);
+            "$" + Number(pair.priceUsd).toFixed(8);
 
         document.getElementById("currentSupply").innerHTML =
             "8,888,888,888 KMN";

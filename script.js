@@ -79,3 +79,34 @@ section.style.transition=".8s";
 observer.observe(section);
 
 });
+// ================================
+// LIVE PRICE FROM DEXSCREENER
+// ================================
+
+async function updateKMNPrice(){
+
+try{
+
+const response = await fetch("https://api.dexscreener.com/latest/dex/pairs/solana/ehd2txxtquwsu3kspjeaohgcbcvdhy7qg32s5n6yzaui");
+
+const data = await response.json();
+
+const pair = data.pair;
+
+document.getElementById("tokenPrice").innerHTML =
+"$" + Number(pair.priceUsd).toFixed(8);
+
+document.getElementById("marketCap").innerHTML =
+"$" + Number(pair.marketCap).toLocaleString();
+
+}catch(err){
+
+console.log(err);
+
+}
+
+}
+
+updateKMNPrice();
+
+setInterval(updateKMNPrice,10000);

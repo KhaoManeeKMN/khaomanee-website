@@ -144,3 +144,24 @@ console.log(e);
 loadKMN();
 
 setInterval(loadKMN,10000);
+// ================================
+// LIVE METRICS
+// ================================
+
+fetch("https://api.dexscreener.com/latest/dex/pairs/solana/ehd2txxtquwsu3kspjeaohgcbcvdhy7qg32s5n6yzaui")
+.then(res => res.json())
+.then(data => {
+
+    const pair = data.pair;
+
+    document.getElementById("marketCap").innerHTML =
+        "$" + Number(pair.fdv).toLocaleString();
+
+    document.getElementById("tokenPrice").innerHTML =
+        "$" + Number(pair.priceUsd).toFixed(8);
+
+    document.getElementById("currentSupply").innerHTML =
+        "8,888,888,888 KMN";
+
+})
+.catch(err => console.log(err));

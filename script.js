@@ -110,3 +110,37 @@ console.log(err);
 updateKMNPrice();
 
 setInterval(updateKMNPrice,10000);
+// ================================
+// LIVE DATA FROM DEXSCREENER
+// ================================
+
+const PAIR =
+"https://api.dexscreener.com/latest/dex/pairs/solana/ehd2txxtquwsu3kspjeaohgcbcvdhy7qg32s5n6yzaui";
+
+async function loadKMN(){
+
+try{
+
+const response = await fetch(PAIR);
+
+const data = await response.json();
+
+const pair = data.pair;
+
+document.getElementById("marketCap").innerHTML =
+"$" + Number(pair.fdv).toLocaleString();
+
+document.getElementById("tokenPrice").innerHTML =
+"$" + Number(pair.priceUsd).toFixed(8);
+
+}catch(e){
+
+console.log(e);
+
+}
+
+}
+
+loadKMN();
+
+setInterval(loadKMN,10000);

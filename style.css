@@ -1155,4 +1155,74 @@ transform:translateY(-15px);
 transform:translateY(0px);
 }
 
+}/* ==========================
+   WHITEPAPER
+========================== */
+
+.whitepaper-section{
+
+padding:120px 8%;
+
+text-align:center;
+
+background:linear-gradient(180deg,#060913,#0b1025);
+
+}
+
+.whitepaper-section h2{
+
+font-size:48px;
+
+font-family:'Orbitron',sans-serif;
+
+color:#00e5c3;
+
+margin-bottom:25px;
+
+}
+
+.whitepaper-section p{
+
+max-width:850px;
+
+margin:auto;
+
+font-size:20px;
+
+line-height:1.9;
+
+color:#d7dcef;
+
+margin-bottom:40px;
+
+}
+
+.whitepaper-btn{
+
+display:inline-block;
+
+padding:20px 45px;
+
+border-radius:50px;
+
+background:linear-gradient(135deg,#00e5c3,#6d5cff);
+
+color:white;
+
+font-size:20px;
+
+font-weight:700;
+
+transition:.35s;
+
+box-shadow:0 0 30px rgba(0,229,195,.35);
+
+}
+
+.whitepaper-btn:hover{
+
+transform:translateY(-6px) scale(1.05);
+
+box-shadow:0 0 45px rgba(0,229,195,.55);
+
 }
